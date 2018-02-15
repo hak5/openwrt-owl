@@ -405,6 +405,19 @@ define Device/hak5-lan-turtle
 endef
 TARGET_DEVICES += hak5-lan-turtle
 
+define Device/hak5-owl
+  DEVICE_TITLE := Hak5 Owl
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-storage kmod-ath9k-htc -swconfig
+  BOARDNAME := HAK5-OWL
+  IMAGE_SIZE := 16064k
+  CONSOLE := ttyATH0,115200
+  MTDPARTS := spi0.0:192k(u-boot)ro,64k(u-boot-env),64k(art)ro,-(firmware)
+  SUPPORTED_DEVICES := hak5-owl
+  IMAGE/sysupgrade.bin = append-kernel | pad-to $$$$(BLOCKSIZE) | \
+	append-rootfs | pad-rootfs | append-metadata | check-size $$$$(IMAGE_SIZE)
+endef
+TARGET_DEVICES += hak5-owl
+
 define Device/hak5-packet-squirrel
     $(Device/tplink-16mlzma)
     DEVICE_TITLE := Hak5 Packet Squirrel

@@ -248,6 +248,7 @@ platform_check_image() {
 	gl-domino|\
 	gl-mifi|\
 	gl-usb150|\
+	hak5-owl|\
 	hiwifi-hc6361|\
 	hornet-ub-x2|\
 	jwap230|\

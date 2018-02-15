@@ -702,6 +702,9 @@ ar71xx_board_detect() {
 	*"Hak5 LAN Turtle")
 		name="hak5-lan-turtle"
 		;;
+	*"Hak5 Owl")
+		name="hak5-owl"
+		;;
 	*"Hak5 Packet Squirrel")
 		name="hak5-packet-squirrel"
 		;;
